@@ -1,40 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>BlockShare Staking Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>BlockShare Staking Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>BlockShare Staking Dashboard</h1>
+<h1>BlockShare Staking Dashboard</h1>
 
-        <button id="connectWallet">Connect Wallet</button>
+<div id="walletInfo">Wallet not connected</div>
+<button id="connectWallet">Connect Wallet</button>
 
-        <div id="walletInfo"></div>
+<hr>
 
-        <h2>Stake Tokens</h2>
-        <input type="number" id="stakeAmount" placeholder="Amount to stake">
-        <input type="text" id="referrer" placeholder="Referrer address (optional)">
-        <button id="stakeBtn">Stake</button>
+<h2>Stake Tokens</h2>
+<input type="text" id="stakeAmount" placeholder="Amount to stake">
+<input type="text" id="referrer" placeholder="Referrer address (optional)">
+<button id="stakeBtn">Stake</button>
 
-        <h2>Claim ROI</h2>
-        <button id="claimRoiBtn">Claim ROI</button>
-        <div id="roiInfo"></div>
+<h2>ROI</h2>
+<button id="claimRoiBtn">Claim ROI</button>
 
-        <h2>Withdraw Stake</h2>
-        <input type="number" id="withdrawAmount" placeholder="Amount to withdraw">
-        <button id="withdrawBtn">Withdraw</button>
+<h2>Withdraw</h2>
+<input type="text" id="withdrawAmount" placeholder="Amount to withdraw">
+<button id="withdrawBtn">Withdraw</button>
 
-        <h2>Pools</h2>
-        <button id="claimRankPoolBtn">Claim Rank Pool</button>
-        <button id="claimHighestPoolBtn">Claim Highest Staker Pool</button>
-        <button id="claimHighTierBtn">Claim High Tier Pool</button>
+<h2>Pools</h2>
+<button id="claimRankPoolBtn">Claim Rank Pool</button>
+<button id="claimHighestPoolBtn">Claim Highest Pool</button>
+<button id="claimHighTierBtn">Claim High Tier Pool</button>
 
-        <div id="poolInfo"></div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
-    <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
